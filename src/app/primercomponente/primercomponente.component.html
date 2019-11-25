@@ -1,0 +1,33 @@
+<p>primercomponente works!</p>
+
+--Tipos de datos
+<p>Esto es un número: {{variable}}</p>
+<p>Esto es una cadena: {{variableCadena}}</p>
+<p>Esto es un array: {{variableArray}}</p>
+<p>Esto es un boolean: {{variableBoolean}}</p>
+<p>Esto es una tupla: {{variableTupla}}</p>
+
+--Interfaces
+<p>Esto es una persona nombre: {{variableIPersona.nombre}}</p>
+<p>Esto es una persona apellidos: {{variableIPersona.apellidos}}</p>
+<p>Esto es una persona edad: {{variableIPersona.edad}}</p>
+<p>Esto es un coche marca: {{variableICoche.marca}}</p>
+<p>Esto es un coche potencia: {{variableICoche.potencia}}</p>
+
+--Clases
+<p>Esto es una persona nombre: {{variableCPersona.nombre}}</p>
+<p>Esto es una persona apellidos: {{variableCPersona.apellidos}}</p>
+<p>Esto es una persona edad: {{variableCPersona.edad}}</p>
+<p>Esto es un coche marca: {{variableCCoche.marca}}</p>
+<p>Esto es un coche potencia: {{variableCCoche.potencia}}</p>
+
+--Llamamos a la función
+<p>A través de una función: {{verNombre()}}</p>
+<input value = "{{variableCPersona.nombre}}" (change)="cambiarNombre($event.target.value)" >
+<input value = "{{variableCCoche.potencia}}" (change)="cambiarPotencia($event.target.value)" >
+
+<hr>
+--Directiva ngmodel 1dirección
+<input [ngModel]="variableCPersona.nombre">
+--Directiva ngmodel 2direcciones
+<input [(ngModel)]="variableCPersona.nombre">
