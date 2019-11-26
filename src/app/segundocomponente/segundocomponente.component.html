@@ -1,1 +1,17 @@
-<p>segundocomponente works!</p>
+Directiva if
+<p *ngIf="variableBooleana">segundocomponente works!</p>
+
+Directiva switch
+<div [ngSwitch]="numero">
+  <p *ngSwitchCase="0">Se está mostrando el elemento 0</p>
+  <p *ngSwitchCase="5">Se está mostrando el elemento 5</p>
+  <p *ngSwitchCase="1">Se está mostrando el elemento 1</p>
+  <p *ngSwitchDefault>Se está mostrando el elemento por defecto</p>
+</div>
+
+Directiva for
+<p *ngFor="let posicion of arrayDatos">{{posicion}}</p>
+
+Directivas de atributo
+<p style="color:red;">Elemento de color rojo</p>
+<p [ngStyle]="{color: 'red'}">Elemento de color rojo a través de directivas</p>

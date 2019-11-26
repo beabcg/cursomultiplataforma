@@ -8,6 +8,10 @@ import { SegundocomponenteComponent } from './segundocomponente/segundocomponent
 import { TercercomponenteComponent } from './tercercomponente/tercercomponente.component';
 import { CuartocomponenteComponent } from './cuartocomponente/cuartocomponente.component';
 import {FormsModule} from '@angular/forms';
+import {_MatMenuDirectivesModule} from '@angular/material';
+import {MatButtonModule, MatIconModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { QuintocomponenteComponent } from './quintocomponente/quintocomponente.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,19 @@ import {FormsModule} from '@angular/forms';
     PrimercomponenteComponent,
     SegundocomponenteComponent,
     TercercomponenteComponent,
-    CuartocomponenteComponent
+    CuartocomponenteComponent,
+    QuintocomponenteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    _MatMenuDirectivesModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

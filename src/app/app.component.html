@@ -1,9 +1,24 @@
-MENU
-<ul>
-  <li><a routerLink="primero">Primer componente</a> </li>
-  <li><a routerLink="segundo">Segundo componente</a> </li>
-  <li><a routerLink="tercero">Tercer componente</a> </li>
-  <li><a routerLink="cuarto">Cuarto componente</a> </li>
-</ul>
-
-<router-outlet></router-outlet>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav mode="side" #sidenav position="start">
+    EJERCICIOS
+    <hr>
+    <ul>
+      <li><a routerLink="primero">Primer componente</a> </li>
+      <li><a routerLink="segundo">Segundo componente</a> </li>
+      <li><a routerLink="tercero">Tercer componente</a> </li>
+      <li><a routerLink="cuarto">Cuarto componente</a> </li>
+      <li><a routerLink="quinto">Quinto componente</a> </li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      Curso multiplataforma
+    </mat-toolbar>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
