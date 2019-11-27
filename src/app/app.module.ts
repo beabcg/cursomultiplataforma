@@ -12,6 +12,9 @@ import {_MatMenuDirectivesModule} from '@angular/material';
 import {MatButtonModule, MatIconModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { QuintocomponenteComponent } from './quintocomponente/quintocomponente.component';
+import {UsuarioApiComponent} from './usuario-api/usuario-api.component';
+import {UsuarioApiService} from './Servicios/usuario-api.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { QuintocomponenteComponent } from './quintocomponente/quintocomponente.c
     SegundocomponenteComponent,
     TercercomponenteComponent,
     CuartocomponenteComponent,
-    QuintocomponenteComponent
+    QuintocomponenteComponent,
+    UsuarioApiComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +35,10 @@ import { QuintocomponenteComponent } from './quintocomponente/quintocomponente.c
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UsuarioApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

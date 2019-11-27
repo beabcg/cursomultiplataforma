@@ -5,6 +5,7 @@ import {SegundocomponenteComponent} from './segundocomponente/segundocomponente.
 import {TercercomponenteComponent} from './tercercomponente/tercercomponente.component';
 import {CuartocomponenteComponent} from './cuartocomponente/cuartocomponente.component';
 import {QuintocomponenteComponent} from './quintocomponente/quintocomponente.component';
+import {UsuarioApiComponent} from './usuario-api/usuario-api.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'segundo', component: SegundocomponenteComponent},
   {path: 'tercero', component: TercercomponenteComponent},
   {path: 'cuarto', component: CuartocomponenteComponent},
-  {path: 'quinto', component: QuintocomponenteComponent}
+  {path: 'quinto', component: QuintocomponenteComponent},
+  {path: 'usuario-api', component: UsuarioApiComponent},
 ];
 
 @NgModule({
