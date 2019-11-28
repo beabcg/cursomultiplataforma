@@ -1,0 +1,35 @@
+<p>curso-api works!</p>
+
+<h2>
+  Cursos API
+</h2>
+<span class="text-danger">{{mensaje}}</span><br><br>
+
+<div *ngIf="! cuantos">No hay cursos por el momento</div>
+<div>
+  <article *ngFor="let curso of cursos">
+    <span>
+      {{curso.id}} {{curso.nombre}} {{curso.descripcion}} ({{curso.capacidad}})
+      <!--  <button (click)="this.borrar(curso.id)">Borrar</button>
+      <button (click)="this.editar(curso.id)">Editar</button> -->
+    </span>
+  </article>
+</div>
+<div>
+  <button (click)="this.nuevo('mostrar')">Añadir</button>
+</div>
+<br>
+<div *ngIf=" edito">
+  <p><span>Id: </span><input type="number" [(ngModel)]="curso.id"></p>
+  <p><span>Nombre: </span><input type="text" [(ngModel)]="curso.nombre"></p>
+  <p><span>Descripcion: </span><input type="text" [(ngModel)]="curso.descripcion"></p>
+  <p><span>Capacidad: </span><input type="number" [(ngModel)]="curso.capacidad"></p>
+  <p><button (click)="this.actualizar(curso.id)">Guardar</button></p>
+</div>
+<div *ngIf=" crear">
+  <p><span>Id: </span><input type="number" [(ngModel)]="curso.id"></p>
+  <p><span>Nombre: </span><input type="text" [(ngModel)]="curso.nombre"></p>
+  <p><span>Descripcion: </span><input type="text" [(ngModel)]="curso.descripcion"></p>
+  <p><span>Capacidad: </span><input type="number" [(ngModel)]="curso.capacidad"></p>
+  <p><button (click)="this.nuevo('grabar')">Guardar</button></p>
+</div>

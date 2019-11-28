@@ -15,6 +15,8 @@ import { QuintocomponenteComponent } from './quintocomponente/quintocomponente.c
 import {UsuarioApiComponent} from './usuario-api/usuario-api.component';
 import {UsuarioApiService} from './Servicios/usuario-api.service';
 import {HttpClientModule} from '@angular/common/http';
+import {CursoApiService} from './Servicios/curso-api.service';
+import { CursoApiComponent } from './curso-api/curso-api.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import {HttpClientModule} from '@angular/common/http';
     TercercomponenteComponent,
     CuartocomponenteComponent,
     QuintocomponenteComponent,
-    UsuarioApiComponent
+    UsuarioApiComponent,
+    CursoApiComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [UsuarioApiService],
+  providers: [UsuarioApiService, CursoApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
